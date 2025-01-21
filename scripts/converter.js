@@ -14,7 +14,7 @@ const exchangeRates = {
     // need more currencies
 };
 function convertCurrency(){
-    const amount = document.getElementById('smount').value;
+    const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
 
