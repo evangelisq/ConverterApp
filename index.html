@@ -7,7 +7,56 @@
 </head>
 <body>
     <Header>
-        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
     </Header>
+    <main>
+        <div class="converter">
+           <h1>Currency Converter</h1>
+           <div class="converter-form">
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="from-currency">
+                <option value="USD">USD - United State Dollar</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="GBP">British Pound Sterling</option>
+                <option value="CAD">Canadian Dollar</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CHF">Swiss Franc</option>
+                <option value="CNY">Chinese Yuan</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="RUB">Russian Ruble</option>
+                <option value="BRL">Braziallian REal</option>
+                <option value="PESO">Philippine Peso</option>
+              <-!--I need more currencies->
+            </select>
+              <select id="to-currency">
+                <option value="USD">USD - United States Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="GBP">GBP - British Pound Sterling</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="AUD">AUD Australian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="RUB">RUB - Russian Ruble</option>
+                <option value="BRL">BRL - Brazilian Real</option>\
+                <option value="PESO">Philippine Peso</option>
+                <-!--I need more currencies->
+              </select>
+              <button onclick="convertCurrency()">Convert</button>  
+           </div>
+           <div id="result"></div>
+        </div>
+    </main>
+    <footer>
+        <p>@ 2025 Evangelis. Last Modified: <span id="last-modified"></span></p>
+    </footer>
 </body>
 </html>
