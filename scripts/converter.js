@@ -17,7 +17,10 @@ function convertCurrency(){
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
-
+    
+    console.log(`Amount: ${amount}`);
+    console.log(`From Currency: ${fromCurrency}`);
+    console.log(`To Currency: ${toCurrency}`);
     if (!amount || isNaN(amount)) {
         alert("Please enter a valid amount.");
         return;
