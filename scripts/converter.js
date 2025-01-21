@@ -45,3 +45,9 @@ function convertCurrency(){
         console.log('Selected currency: ${currency');
     }
 }
+
+// Updating the last modified time and date
+document.addEventListener('DOMContentLoaded', (Event)=>{
+    const lastModifiedElement = document.getElementById('last-modified');
+    lastModifiedElement.textContent = document.lastModified;
+})
