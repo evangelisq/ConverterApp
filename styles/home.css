@@ -44,6 +44,12 @@ p{
     margin: 50px;
     font-size: 30px;
 }
+h2 {
+    margin: 30px;
+}
+ul {
+    font-size: 25px;
+}
 footer {
     background-color: #4caf50;
     color: white;
