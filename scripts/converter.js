@@ -16,32 +16,31 @@ function convertCurrency(){
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
 
-    console.log(`amount:${amount}`);
+    console.log(`Amount: ${amount}`);
     console.log(`From Currency: ${fromCurrency}`);
-    console.log(`To Currency: $ { toCurrency}`);
-};
-if (!amount| isNaN(amount)){
-    alert("Please enter a valid amount.");
-    return;
-}
-if (!exchangeRates[fromCurrency] || ! exchangeRates[toCurrency]) {
-    alert("Invalid currency selection.");
-    return;
-}
-console.log("Exchange Rate:");
-for (const currency in exchangeRates) {
-    console.log(`${currency}: ${exchangeRates [currency]}`);
-}
-const fromRate = exchangeRates [fromCurrency];
-const toRate = exchangeRates [toCurrency];
-const convertedAmount = (amount / fromRate) * toRate;
+    console.log(`To Currency: ${toCurrency}`);
+    if (!amount || isNaN(amount)) {
+        alert("Please enter the valid amount.");
+        return;
+    }
+    if (!exchangeRates[fromCurrency] || !exchangeRates[toCurrency]) {
+        alert("Invalid currency selection");
+        return;
+    }
+    // Using a for, in loop to print all exchange rates
+    console.log("Exchange Rates");
+    for (const currency in exchangeRates) {
+        console.log(`${currency}: ${exchangeRates[currency]}`);
+    }
+    const fromRate = exchangeRates [fromCurrency];
+    const toRate  = exchangeRates [toCurrency];
+    const convertedAmount = (amount / fromRate) * toRate;
+    document.getElementById('result').textContent = `{amount} ${fromCurrency} is equivalent to ${convertedAmount.toFixed(2)} ${toCurrency}`;
 
-document.getElementById ('result').textContent =
-`{amount} ${fromCurrency} is equivalent to $ {convertedAmount.toFixed(2)} ${toCurrency}`;
-
-// using a for, of loop to loop through and print selected currency options.
-console.log("Selected Currency Options:");
-const SelectedCurrencies = [fromCurrency, toCurrency];
-for (const currency of SelectedCurrencies) {
-    console.log('Selected Currency: ${currency');
+    // Using a for, of loop to loop through and print selected currency options
+    console.log("Selected Currency Options:");
+    const SelectedCurrencies = [fromCurrency, toCurrency];
+    for (const currency of SelectedCurrencies) {
+        console.log ('Selected currency: ${currency');
+    }
 }
