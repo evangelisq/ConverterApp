@@ -47,7 +47,7 @@ function convertCurrency(){
      const formattedAmount = numeral(convertedAmount).format('0, 0.00');
 
     //
-    document.getElementById('result').textContent = `{amount} ${fromCurrency} is equivalent to ${formattedAmount} ${toCurrency}`;
+    document.getElementById('result').textContent = ` ${fromCurrency} is equivalent to ${formattedAmount} ${toCurrency}`;
 
     // Log selected currency options to console using a for , of loop.
     console.log("Selected Currency Options:");
@@ -55,4 +55,11 @@ function convertCurrency(){
     for (const currency of selectedCurrencies) {
         console.log ('Selected currency: ${currency');
     }
+}
+
+// Function to update conversion history
+function updateHistory(amount, fromCurrency, toCurrency, formattedAmount) {
+    const historyElement = document.getElementById('history');
+    const newHistoryItem = document.createElement('li');
+    newHistoryItem.appendChild(newHistoryItem);
 }

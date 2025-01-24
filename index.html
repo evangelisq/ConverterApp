@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/converter.css">
-    <script src="scripts/converter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-    <style>
-    <title>ConverterApp</title>
+    <script src="scripts/converter.js"></script>
+    <title> Converter App </title>
 </head>
 <body>
     <Header>
@@ -30,44 +29,14 @@
 
            <label for="to-currency">To Currency:</label>
            <input type="text" id="to-currency" ::placeholder="Enter to currency">
-
-           <div class="converter-form">
-            <input type="number" id="amount" placeholder="Amount" required>
-            <select id="from-currency">
-                <option value="USD">USD - United State Dollar</option>
-                <option value="EUR">EUR</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-                <option value="GBP">British Pound Sterling</option>
-                <option value="CAD">Canadian Dollar</option>
-                <option value="AUD">Australian Dollar</option>
-                <option value="CHF">Swiss Franc</option>
-                <option value="CNY">Chinese Yuan</option>
-                <option value="INR">Indian Rupee</option>
-                <option value="RUB">Russian Ruble</option>
-                <option value="BRL">Braziallian REal</option>
-                <option value="PESO">Philippine Peso</option>
-              <-!--I need more currencies->
-            </select>
-              <select id="to-currency">
-                <option value="USD">USD - United States Dollar</option>
-                <option value="EUR">EUR - Euro</option>
-                <option value="JPY">JPY - Japanese Yen</option>
-                <option value="GBP">GBP - British Pound Sterling</option>
-                <option value="CAD">CAD - Canadian Dollar</option>
-                <option value="AUD">AUD Australian Dollar</option>
-                <option value="CHF">CHF - Swiss Franc</option>
-                <option value="CNY">CNY - Chinese Yuan</option>
-                <option value="INR">INR - Indian Rupee</option>
-                <option value="RUB">RUB - Russian Ruble</option>
-                <option value="BRL">BRL - Brazilian Real</option>
-                <-!--If need more currencies->
-              </select>
+           
+          
               <button onclick="convertCurrency()">Convert</button>  
 
               <h2>Convert Amount: <span id="result"></span></h2>
               <h2>Conversion History:</h2>
               <ul id="history"></ul>
-           </div>
+           
            <div id="result"></div>
         </div>
     </main>
