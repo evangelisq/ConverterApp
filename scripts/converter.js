@@ -1,3 +1,4 @@
+// Excgange rates for various currencies
 const exchangeRates = {
     USD: 1.0,
     EUR: 0.85,
@@ -11,14 +12,19 @@ const exchangeRates = {
     RUB: 74.0,
     BRL:5.25
 };
+// Function to convert currency
 function convertCurrency(){
+    // Get input values
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('from-currency').value;
     const toCurrency = document.getElementById('to-currency').value;
-
+ 
+    // Log input values to console
     console.log(`Amount: ${amount}`);
     console.log(`From Currency: ${fromCurrency}`);
     console.log(`To Currency: ${toCurrency}`);
+
+    //validate input values
     if (!amount || isNaN(amount)) {
         alert("Please enter the valid amount.");
         return;
@@ -32,15 +38,21 @@ function convertCurrency(){
     for (const currency in exchangeRates) {
         console.log(`${currency}: ${exchangeRates[currency]}`);
     }
+    //vCalculate converted amount
     const fromRate = exchangeRates [fromCurrency];
     const toRate  = exchangeRates [toCurrency];
     const convertedAmount = (amount / fromRate) * toRate;
-    document.getElementById('result').textContent = `{amount} ${fromCurrency} is equivalent to ${convertedAmount.toFixed(2)} ${toCurrency}`;
 
-    // Using a for, of loop to loop through and print selected currency options
+    // Format converted amount using Numeral.js
+     const formattedAmount = numeral(convertedAmount).format('0, 0.00');
+
+    //
+    document.getElementById('result').textContent = `{amount} ${fromCurrency} is equivalent to ${formattedAmount} ${toCurrency}`;
+
+    // Log selected currency options to console using a for , of loop.
     console.log("Selected Currency Options:");
-    const SelectedCurrencies = [fromCurrency, toCurrency];
-    for (const currency of SelectedCurrencies) {
+    const selectedCurrencies = [fromCurrency, toCurrency];
+    for (const currency of selectedCurrencies) {
         console.log ('Selected currency: ${currency');
     }
 }
