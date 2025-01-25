@@ -10,7 +10,18 @@ const exchangeRates = {
     SNY: 6.45,
     INR: 73.0,
     RUB: 74.0,
-    BRL:5.25
+    BRL:5.25,
+    MXN: 20.0,
+    NZD: 1.4,
+    SGD: 1.35,
+    HKD: 7.5,
+    ZAR: 14.5,
+    THB: 32.0,
+    PHP: 50.0,
+    KRW: 1180.0,
+    SEK: 8.6,
+    NOK: 8.8,
+    DKK: 6.3
 };
 // Function to convert currency
 function convertCurrency(){
