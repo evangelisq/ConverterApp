@@ -63,3 +63,32 @@ function updateHistory(amount, fromCurrency, toCurrency, formattedAmount) {
     const newHistoryItem = document.createElement('li');
     newHistoryItem.appendChild(newHistoryItem);
 }
+
+// function to add the options select control
+// use this as a recursive function to fill all the values
+// keyIndex is the Index to use function
+function fillCurrencySelect(controlId, keyIndex) {
+    var selectElement = document.getElementById(controlId);
+
+    try{
+        var option = document.createElement("option");
+
+        // fill in the new option with the next key values
+
+        var rateKeys = Object.keys(exchangeRates);
+        var rateKeys = rateKeys[keyIndex];
+        option.value = exchangeRates[rateKeys];
+        option.text = rateKeys[keyIndex];
+        selectElement.appendChild(option);
+    }
+    catch(error){
+         console.error("error option element", error);
+    }
+
+    // if there are more to add, then call recursively
+    keyIndex = keyIndex + 1;
+    if (keyIndex < rateKeys.length){
+        fillCurrencySelect(controlId, keyIndex)
+    }
+    
+}

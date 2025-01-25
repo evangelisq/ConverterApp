@@ -3,8 +3,7 @@
 
 
 
-YouTube video link: https://youtu.be/9IgPJuuMXjo
-
+[Software Demo Video] https://youtu.be/9IgPJuuMXjo
 
 # Development Environment
 
@@ -12,6 +11,14 @@ YouTube video link: https://youtu.be/9IgPJuuMXjo
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* GitHub website: https://github.com/evangelisq/ConverterApp
-* App website: https://evangelisq.github.io/ConverterApp/
+
+
+- GitHub website: https://github.com/evangelisq/ConverterApp
+- Conveeter App Website: https://evangelisq.github.io/ConverterApp/
+
+# Future Work
+
+
+- Item 1
+- Item 2
+- Item 3
