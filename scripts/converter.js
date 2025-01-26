@@ -108,11 +108,10 @@ function fillCurrencySelect(controlId, keyIndex) {
     }  
 }
 
+  // Output the current year in the footer's first paragraph
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentyear").textContent = currentYear;
   
-// Display the current year in the first paragraph of the footer.
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
-
-// Display the date the document was last modified in the second paragraph of the footer.
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = "Last Modification: " + lastModified;
+  // Output the date the document was last modified in the footer's second paragraph
+  const lastModified = document.lastModified;
+  document.getElementById("lastModified").textContent = "Last Modification: " + lastModified;
