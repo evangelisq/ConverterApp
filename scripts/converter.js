@@ -72,7 +72,12 @@ function convertCurrency(){
 function updateHistory(amount, fromCurrency, toCurrency, formattedAmount) {
     const historyElement = document.getElementById('history');
     const newHistoryItem = document.createElement('li');
+    newHistoryItem.textContent = `${amount} ${amount} ${fromCurrency} ⃗ ${formattedAmount} ${toCurrency}`;
     newHistoryItem.appendChild(newHistoryItem);
+}
+
+function clearHistory() {
+    document.getElementById('history').innerHTML = '';
 }
 
 // function to add the options select control
@@ -100,6 +105,14 @@ function fillCurrencySelect(controlId, keyIndex) {
     keyIndex = keyIndex + 1;
     if (keyIndex < rateKeys.length){
         fillCurrencySelect(controlId, keyIndex)
-    }
-    
+    }  
 }
+
+  
+// Display the current year in the first paragraph of the footer.
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = currentYear;
+
+// Display the date the document was last modified in the second paragraph of the footer.
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = "Last Modification: " + lastModified;
